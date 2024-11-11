@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Project architecture
+
+The architecture that the project will follow is
+- Strategic design base on DDDD architecture
+- More information about the architecture and the project can be found in the issue:
+  - https://github.com/serggiio/DH-devlinks-ui/issues/1
+
+# Code agreements
+1. Prefix for components, services, directives, pipes, commits
+    'dv'
+   - Example components and services: 
+     - 'dv-home.component.ts'
+     - 'dv-search.service.ts'
+2. For the commits the prefix of the commit should start with the 'DV' prefix followed by the issue number.
+   - Example commits:
+     - 'DV-1: add new libraries'
