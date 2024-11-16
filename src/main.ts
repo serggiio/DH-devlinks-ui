@@ -1,6 +1,24 @@
 import {bootstrapApplication} from '@angular/platform-browser';
-import {appConfig} from './app/app.config';
 import {AppComponent} from './app/app.component';
+import {provideRouter, Routes} from '@angular/router';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+const routes: Routes = [
+  {path: '', component: AppComponent},
+  {
+    path: 'auth',
+    loadChildren: () => import('./app/domains/dv-authentication/dv-authentication.module').then(m => m.DvAuthenticationModule),
+  }
+];
+
+/*bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));*/
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes),
+  ]
+})
+  .catch(err => console.error(err));
+
+/*platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));*/
