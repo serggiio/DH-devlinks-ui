@@ -8,7 +8,26 @@ $dv-secondary-dark: #7373hh73;
 $dv-secondary-white: #FAFAFA;
 $dv-secondary: #BEADFF;
 $dv-white: #FFFFFF;
+$dv-grey: #737373;
+
 
 $dv-font-size-subtitle: 14px;
-$dv-font-size-text: 10px;
-$dv-font-size-title: 16px;
+$dv-font-size-text: 12px;
+$dv-font-size-title: 28px;
+
+:root {
+  --dv-danger: #{$dv-danger};
+  --dv-dark: #{$dv-dark};
+  --dv-disabled-dark: #{$dv-disabled-dark};
+  --dv-disabled: #{$dv-disabled};
+  --dv-primary: #{$dv-primary};
+  --dv-secondary-dark: #{$dv-secondary-dark};
+  --dv-secondary-white: #{$dv-secondary-white};
+  --dv-secondary: #{$dv-secondary};
+  --dv-white: #{$dv-white};
+  --dv-grey: #{$dv-grey};
+
+  --dv-font-size-subtitle: #{$dv-font-size-subtitle};
+  --dv-font-size-text: #{$dv-font-size-text};
+  --dv-font-size-title: #{$dv-font-size-title};
+}

@@ -1,1 +1,56 @@
-<p>dv-login works!</p>
+<article class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()" class="login-form">
+    <h1 class="login-title">Login</h1>
+    <p class="login-subtitle">Add your details below to get back into the app</p>
+
+    <section class="login-form-group">
+      <label for="email"
+             class="login-field-title login-field-title-valid"
+             [ngClass]="{'login-field-title-invalid': loginForm.get('email')?.touched && loginForm.get('email')?.invalid}">
+        Email address
+      </label>
+      <div
+        class="login-input-wrapper login-input-wrapper-valid"
+        [ngClass]="{'login-input-wrapper-invalid': loginForm.get('email')?.touched && loginForm.get('email')?.invalid}"
+      >
+        <i class="icon-mail login-input-icon"></i>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="e.g. alex@email.com"
+          class="login-input"
+        />
+      </div>
+    </section>
+
+    <section class="login-form-group">
+      <label
+        for="password"
+        class="login-field-title login-field-title-valid"
+        [ngClass]="{'login-field-title-invalid': loginForm.get('password')?.touched && loginForm.get('password')?.invalid}"
+      >
+        Password
+      </label>
+      <div class="login-input-wrapper login-input-wrapper-valid"
+           [ngClass]="{'login-input-wrapper-invalid': loginForm.get('password')?.touched && loginForm.get('password')?.invalid}">
+        <i class="icon-lock login-input-icon"></i>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="Enter your password"
+          class="login-input"
+        />
+      </div>
+    </section>
+
+    <button type="submit" class="login-button" [disabled]="loginForm.invalid">
+      Login
+    </button>
+
+    <p class="login-create-account">
+      Don't have an account? <a routerLink="/register">Create account</a>
+    </p>
+  </form>
+</article>

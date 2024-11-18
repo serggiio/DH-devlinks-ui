@@ -1,28 +1,30 @@
-/* authentication.component.css */
 .auth-container {
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 5vh; /* Posiciona ligeramente más arriba */
-  box-sizing: border-box;
-}
+  padding-top: 16vh;
 
-.logo-section {
-  text-align: center;
-  margin-bottom: 20px; /* Espacio entre logo/texto y el formulario */
-}
+  .auth-logo-container {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
 
-.logo {
-  width: 80px; /* Tamaño del logo ajustable */
-  height: auto;
-  margin-bottom: 10px; /* Espacio entre el logo y el título */
-}
+    .auth-logo {
+      align-content: end;
+      height: auto;
+      justify-content: end;
+      width: 40px;
+    }
 
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #333; /* Color de la marca */
-  margin: 0;
+    .auth-title {
+      font-size: var(--dv-font-size-title);
+      font-weight: 700;
+      margin: 0;
+    }
+  }
 }

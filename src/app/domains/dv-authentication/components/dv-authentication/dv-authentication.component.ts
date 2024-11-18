@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 
 @Component({
@@ -8,7 +8,8 @@ import {RouterOutlet} from '@angular/router';
     RouterOutlet
   ],
   templateUrl: './dv-authentication.component.html',
-  styleUrl: './dv-authentication.component.scss'
+  styleUrl: './dv-authentication.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DvAuthenticationComponent {
 

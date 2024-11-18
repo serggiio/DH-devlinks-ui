@@ -9,12 +9,17 @@ export const AUTH_ROUTES: Routes = [
     component: DvAuthenticationComponent,
     children: [
       {
-        path: '',
+        path: 'login',
         component: DvLoginComponent
       },
       {
         path: 'register',
         component: DvRegisterComponent
+      },
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
       }
     ]
   }
