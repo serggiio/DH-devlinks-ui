@@ -1,0 +1,30 @@
+.auth-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 16vh;
+
+  .auth-logo-container {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .auth-logo {
+      align-content: end;
+      height: auto;
+      justify-content: end;
+      width: 40px;
+    }
+
+    .auth-title {
+      font-size: var(--dv-font-size-title);
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+}
