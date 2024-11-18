@@ -1,0 +1,122 @@
+.register-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+
+  .register-form {
+    align-items: start;
+    background: var(--dv-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 350px;
+
+    .register-title {
+      font-size: var(--dv-font-size-title);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .register-subtitle {
+      color: var(--dv-grey);
+      font-size: var(--dv-font-size-subtitle);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .register-form-group {
+      margin-bottom: 1rem;
+      width: 100%;
+
+      .register-field-title {
+        font-size: var(--dv-font-size-text);
+
+        &-valid {
+          color: var(--dv-dark);
+        }
+
+        &-invalid {
+          color: var(--dv-danger);
+        }
+      }
+
+      .register-input-wrapper {
+        align-items: center;
+        border-radius: 8px;
+        border: solid 1px;
+        display: flex;
+
+        &:focus-within {
+          border-color: var(--dv-primary);
+          box-shadow: 0 0 8px rgba(99, 60, 255, 0.4);
+        }
+
+        .register-input {
+          border: none;
+          height: 44px;
+          outline: none;
+          width: 100%;
+        }
+
+        .register-input-icon {
+          color: var(--dv-grey);
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+
+        &-valid {
+          border-color: var(--dv-disabled-dark);
+        }
+
+        &-invalid {
+          border-color: var(--dv-danger);
+        }
+      }
+
+    }
+
+    .register-password-message {
+      font-size: var(--dv-font-size-text);
+    }
+
+    .register-button {
+      background: var(--dv-primary);
+      border-radius: 4px;
+      border: none;
+      color: var(--dv-white);
+      cursor: pointer;
+      font-size: var(--dv-font-size-subtitle);
+      margin-top: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+
+      &:disabled {
+        background: var(--dv-secondary);
+        cursor: not-allowed;
+      }
+    }
+
+    .register-create-account {
+      display: flex;
+      font-size: var(--dv-font-size-subtitle);
+      justify-content: center;
+      margin-top: 1rem;
+      width: 100%;
+
+      a {
+        color: #633cff;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

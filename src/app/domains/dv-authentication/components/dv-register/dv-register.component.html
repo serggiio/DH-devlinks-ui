@@ -1,1 +1,82 @@
-<p>dv-register works!</p>
+<article class="register-container">
+  <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" class="register-form">
+    <h1 class="register-title">Create account</h1>
+    <p class="register-subtitle">Let’s get you started sharing your links!</p>
+
+    <section class="register-form-group">
+      <label for="email"
+             class="register-field-title register-field-title-valid"
+             [ngClass]="{'register-field-title-invalid': registerForm.get('email')?.touched && registerForm.get('email')?.invalid}">
+        Email address
+      </label>
+      <div
+        class="register-input-wrapper register-input-wrapper-valid"
+        [ngClass]="{'register-input-wrapper-invalid': registerForm.get('email')?.touched && registerForm.get('email')?.invalid}"
+      >
+        <i class="icon-mail register-input-icon"></i>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="e.g. alex@email.com"
+          class="register-input"
+        />
+      </div>
+    </section>
+
+    <section class="register-form-group">
+      <label
+        for="password"
+        class="register-field-title register-field-title-valid"
+        [ngClass]="{'register-field-title-invalid': registerForm.get('password')?.touched && registerForm.get('password')?.invalid}"
+      >
+        Create password
+      </label>
+      <div class="register-input-wrapper register-input-wrapper-valid"
+           [ngClass]="{'register-input-wrapper-invalid': registerForm.get('password')?.touched && registerForm.get('password')?.invalid}">
+        <i class="icon-lock register-input-icon"></i>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="At least 8 characters"
+          class="register-input"
+        />
+      </div>
+    </section>
+
+    <section class="register-form-group">
+      <label
+        for="password"
+        class="register-field-title register-field-title-valid"
+        [ngClass]="{'register-field-title-invalid': registerForm.get('confirmPassword')?.touched && registerForm.hasError('passwordsMismatch')}"
+      >
+        Confirm password
+      </label>
+      <div class="register-input-wrapper register-input-wrapper-valid"
+           [ngClass]="{'register-input-wrapper-invalid': registerForm.get('confirmPassword')?.touched && registerForm.hasError('passwordsMismatch')}">
+        <i class="icon-lock register-input-icon"></i>
+        <input
+          id="confirmPassword"
+          type="password"
+          formControlName="confirmPassword"
+          placeholder="At least 8 characters"
+          class="register-input"
+        />
+      </div>
+    </section>
+
+    <label
+      class="register-password-message">
+      Password must contain at least 8 characters
+    </label>
+
+    <button type="submit" class="register-button" [disabled]="registerForm.invalid">
+      Create new account
+    </button>
+
+    <p class="register-create-account">
+      Already have an account? <a [routerLink]="['../login']">Login</a>
+    </p>
+  </form>
+</article>

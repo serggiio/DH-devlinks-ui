@@ -16,11 +16,11 @@ export const AUTH_ROUTES: Routes = [
         path: 'register',
         component: DvRegisterComponent
       },
-      {
+      /*{
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
-      }
+      }*/
     ]
   }
 ];
