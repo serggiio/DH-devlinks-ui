@@ -1,0 +1,22 @@
+<header class="dv-navbar">
+  <section class="dv-navbar-logo">
+    <img src="assets/logo.svg" alt="Logo" class="dv-navbar-logo"/>
+    <h1 class="dv-navbar-title">devlinks</h1>
+  </section>
+  <section>
+    <button class="dv-navbar-button dv-navbar-button-active" [routerLink]="['edit-links']">
+      <span class="icon-link dv-navbar-button-icon"></span>
+      <span class="dv-navbar-button-text">Links</span>
+    </button>
+    <button class="dv-navbar-button" [routerLink]="['profile']">
+      <span class="icon-user dv-navbar-button-icon"></span>
+      <span class="dv-navbar-button-text">Profile Details</span>
+    </button>
+  </section>
+  <section>
+    <button class="dv-navbar-button dv-navbar-button-preview" routerLink="/preview">
+      <span class="icon-user icon-eye dv-navbar-button-icon"></span>
+      <span class="dv-navbar-button-text">Preview</span>
+    </button>
+  </section>
+</header>

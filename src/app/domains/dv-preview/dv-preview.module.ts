@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DvProfileRoutingModule } from './dv-profile-routing.module';
+import { DvPreviewRoutingModule } from './dv-preview-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    DvProfileRoutingModule
+    DvPreviewRoutingModule
   ]
 })
-export class DvProfileModule { }
+export class DvPreviewModule { }

@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {LINKS_ROUTES} from './dv-links.routes';
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(LINKS_ROUTES)],
   exports: [RouterModule]
 })
-export class DvLinksRoutingModule { }
+export class DvLinksRoutingModule {
+}

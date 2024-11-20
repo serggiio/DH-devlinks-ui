@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./app/domains/dv-authentication/dv-authentication.module').then(m => m.DvAuthenticationModule),
+  },
+  {
+    path: 'links',
+    loadChildren: () => import('./app/domains/dv-links/dv-links.module').then(m => m.DvLinksModule),
   }
 ];
 

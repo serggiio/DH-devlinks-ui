@@ -1,0 +1,45 @@
+.dv-links-main {
+  display: flex;
+  flex-direction: row;
+
+  .dv-links-browser {
+    background-color: var(--dv-white);
+    width: 30%;
+    margin: 16px;
+
+    @media (min-width: 1200px) {
+      width: 30%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .dv-links-content {
+    background-color: var(--dv-white);
+    width: 60%;
+    margin: 16px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+.phone-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .phone-browser {
+    width: 70%;
+    height: 84%;
+  }
+}
