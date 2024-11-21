@@ -4,11 +4,17 @@
     <p class="dv-edit-links-subtitle">
       Add/edit/remove links below and then share all your profiles with the world
     </p>
-    <button class="dv-edit-links-add-button">+ Add new link</button>
+    <button class="dv-edit-links-add-button" (click)="addNewLink()">+ Add new link</button>
   </section>
 
   <section class="dv-edit-links-body">
-    <div class="dv-edit-links-body-starter">
+    <dv-links-edit-element
+      *ngFor="let link of links; index as index"
+      [link]="link"
+      [index]="index + 1"
+      (removeEvent)="removeLink($event)">
+    </dv-links-edit-element>
+    <div class="dv-edit-links-body-starter" *ngIf="links.length === 0">
       <img src="assets/started-body.png" alt=""/>
       <h1>Let’s get you started</h1>
       <p>Use the “Add new link” button to get started. Once you have more than one link, you can reorder and edit them.

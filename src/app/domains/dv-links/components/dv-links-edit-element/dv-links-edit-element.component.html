@@ -1,0 +1,38 @@
+<article class="dv-link-edit">
+  <section class="dv-link-edit-header">
+    <div class="dv-link-edit-header-title">
+      <span class="icon-menu"></span> Link#{{index}}
+    </div>
+    <div class="dv-link-edit-header-remove" (click)="onRemove()">Remove</div>
+  </section>
+  <section class="dv-link-edit-content">
+    <div class="dv-link-edit-content-form-group">
+      <label class="dv-link-edit-content-form-title">
+        Platform
+      </label>
+      <div class="dv-link-edit-input-wrapper">
+        <i class="icon-mail dv-link-edit-input-icon"></i>
+        <select
+          name="select-link"
+          id="select-link"
+          class="dv-link-edit-input dv-link-edit-select">
+          <option>Git</option>
+          <option>FB</option>
+        </select>
+      </div>
+    </div>
+    <div class="dv-link-edit-content-form-group">
+      <label class="dv-link-edit-content-form-title">
+        Link
+      </label>
+      <div class="dv-link-edit-input-wrapper">
+        <i class="icon-link dv-link-edit-input-icon"></i>
+        <input
+          id="link"
+          type="text"
+          placeholder="e.g. https://www.github.com/johnappleseed"
+          class="dv-link-edit-input"/>
+      </div>
+    </div>
+  </section>
+</article>
