@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -8,7 +8,8 @@ import {RouterLink} from "@angular/router";
         RouterLink
     ],
   templateUrl: './dv-links-navbar.component.html',
-  styleUrl: './dv-links-navbar.component.scss'
+  styleUrl: './dv-links-navbar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DvLinksNavbarComponent {
 

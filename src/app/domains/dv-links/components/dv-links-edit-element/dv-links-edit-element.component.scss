@@ -1,0 +1,62 @@
+.dv-link-edit {
+  width: auto;
+  height: 200px;
+  background: var(--dv-secondary-white);
+  border-radius: 15px;
+  padding: 24px;
+  margin-bottom: 16px;
+
+  .dv-link-edit-header {
+    display: flex;
+    color: var(--dv-grey);
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .dv-link-edit-header-title {
+      font-weight: bold;
+    }
+  }
+
+  .dv-link-edit-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .dv-link-edit-content-form-group {
+      margin-bottom: 1rem;
+      width: 100%;
+
+      .dv-link-edit-content-form-title {
+        font-size: var(--dv-font-size-text);
+      }
+
+      .dv-link-edit-input-wrapper {
+        align-items: center;
+        border-radius: 8px;
+        border: solid 1px;
+        border-color: var(--dv-grey);
+        display: flex;
+
+        .dv-link-edit-input {
+          border: none;
+          height: 44px;
+          outline: none;
+          width: 100%;
+          text-overflow: ellipsis;
+        }
+
+        .dv-link-edit-input-icon {
+          color: var(--dv-grey);
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+
+        .dv-link-edit-select {
+          appearance: none;
+          background: url('/assets/arrow-select.svg') no-repeat right 16px center;
+        }
+      }
+    }
+  }
+}

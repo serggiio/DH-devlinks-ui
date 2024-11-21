@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 import {DvLinksNavbarComponent} from '../dv-links-navbar/dv-links-navbar.component';
 
 @Component({
@@ -7,11 +7,11 @@ import {DvLinksNavbarComponent} from '../dv-links-navbar/dv-links-navbar.compone
   standalone: true,
   imports: [
     RouterOutlet,
-    RouterLink,
     DvLinksNavbarComponent
   ],
   templateUrl: './dv-links.component.html',
-  styleUrl: './dv-links.component.scss'
+  styleUrl: './dv-links.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DvLinksComponent {
 
