@@ -1,1 +1,49 @@
-<p>dv-profile works!</p>
+<article class="dv-profile-container">
+  <section class="dv-profile-header">
+    <h1 class="dv-profile-title">Profile Details</h1>
+    <p class="dv-profile-subtitle">
+      Add your details to create a personal touch to your profile.
+    </p>
+  </section>
+
+  <section class="dv-profile-body">
+    <div class="dv-profile-content">
+      <div class="dv-profile-group-field">
+        <label class="dv-profile-group-field-start">Profile picture</label>
+        <div class="dv-profile-group-field-middle">
+          <!--<input type="file" id="profilePicture" class="dv-profile-upload-input"/>-->
+          <span class="icon-image"></span>
+          <p>+ Upload Image</p>
+        </div>
+        <p class="dv-profile-group-field-end">Image must be below 1024x1024px. Use PNG or JPG format.</p>
+      </div>
+
+      <div class="dv-profile-group-field">
+        <div class="dv-profile-group-field-start">
+          <div class="dv-profile-field">
+            <label>First name*</label>
+          </div>
+
+          <div class="dv-profile-field">
+            <label>Last name*</label>
+          </div>
+
+          <div class="dv-profile-field">
+            <label>Email</label>
+          </div>
+        </div>
+
+        <div class="dv-profile-group-fields-end">
+          <input type="text" id="firstName" placeholder="e.g. John"/>
+          <input type="text" id="lastName" placeholder="e.g. Appleseed"/>
+          <input type="email" id="email" placeholder="e.g. email@example.com"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dv-profile-footer">
+    <hr class="dv-profile-divider"/>
+    <button class="dv-profile-save-button">Save</button>
+  </section>
+</article>

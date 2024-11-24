@@ -4,11 +4,15 @@
     <h1 class="dv-navbar-title">devlinks</h1>
   </section>
   <section>
-    <button class="dv-navbar-button dv-navbar-button-active" [routerLink]="['edit-links']">
+    <button class="dv-navbar-button"
+            routerLinkActive="dv-navbar-button-active"
+            [routerLink]="['edit-links']">
       <span class="icon-link dv-navbar-button-icon"></span>
       <span class="dv-navbar-button-text">Links</span>
     </button>
-    <button class="dv-navbar-button" [routerLink]="['profile']">
+    <button class="dv-navbar-button"
+            routerLinkActive="dv-navbar-button-active"
+            [routerLink]="['profile']">
       <span class="icon-user dv-navbar-button-icon"></span>
       <span class="dv-navbar-button-text">Profile Details</span>
     </button>
