@@ -1,0 +1,14 @@
+<article class="dv-links-info">
+  <section class="dv-links-info-element" *ngFor="let link of links"
+           [ngStyle]="{'backgroundColor': DvLinkColors[link.platform] }">
+    <div class="dv-links-info-element-icon">
+      <img src="{{DvLinkIcons[link.platform]}}" alt=""/>
+    </div>
+    <div class="dv-links-info-element-platform">
+      <p>{{ link.platform }}</p>
+    </div>
+    <div class="dv-links-info-element-button">
+      <img src="assets/arrow-right.svg" alt="">
+    </div>
+  </section>
+</article>
