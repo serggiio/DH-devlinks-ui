@@ -20,37 +20,37 @@ export class DvLinksInfoComponent {
     {
       id: '1',
       link: 'https://www.dvlinks.com',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.GitHub,
-      updated_at: ''
+      updated_at: new Date()
     },
     {
       id: '2',
       link: 'https://www.dvlinks.com',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.LinkedIn,
-      updated_at: ''
+      updated_at: new Date()
     },
     {
       id: '3',
       link: 'https://www.dvlinks.com',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.YouTube,
-      updated_at: ''
+      updated_at: new Date()
     },
     {
       id: '3',
       link: 'https://www.dvlinks.com',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.Facebook,
-      updated_at: ''
+      updated_at: new Date()
     },
     {
       id: '3',
       link: 'https://www.dvlinks.com',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.GitLab,
-      updated_at: ''
+      updated_at: new Date()
     }
   ];
   protected readonly DvLinkIcons = DvLinkIcons;

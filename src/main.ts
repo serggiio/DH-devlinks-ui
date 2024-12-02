@@ -1,6 +1,12 @@
 import {bootstrapApplication} from '@angular/platform-browser';
 import {AppComponent} from './app/app.component';
 import {provideRouter, Routes} from '@angular/router';
+import {provideStore} from '@ngrx/store';
+import {provideEffects} from '@ngrx/effects';
+import {provideStoreDevtools} from '@ngrx/store-devtools';
+import {isDevMode} from '@angular/core';
+import {linksReducer} from './app/domains/common/core/state/reducers/dv-links.reducer';
+import {LinksEffects} from './app/domains/common/core/state/effects/dv-links.effects';
 
 const routes: Routes = [
   {path: '', component: AppComponent},
@@ -20,6 +26,9 @@ const routes: Routes = [
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
+    provideStore({links: linksReducer}),
+    provideEffects([LinksEffects]),
+    provideStoreDevtools({maxAge: 25, logOnly: !isDevMode()})
   ]
 })
   .catch(err => console.error(err));

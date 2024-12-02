@@ -21,16 +21,16 @@ export class DvEditLinksComponent {
     /*{
       id: '1',
       link: '',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.Facebook,
-      updated_at: ''
+      updated_at: new Date()
     },
     {
       id: '2',
       link: '',
-      created_at: '',
+      created_at: new Date(),
       platform: DvLinkTypes.Facebook,
-      updated_at: ''
+      updated_at: new Date()
     }*/];
 
   public removeLink(id: string): void {
@@ -43,8 +43,8 @@ export class DvEditLinksComponent {
       {
         id: this.links.length.toString(),
         link: '',
-        updated_at: '',
-        created_at: (new Date()).toDateString(),
+        updated_at: new Date(),
+        created_at: new Date(),
         platform: DvLinkTypes.Facebook
       }
     );
